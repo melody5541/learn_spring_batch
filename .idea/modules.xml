@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Documents/workspace_java/spring_batch/gs-batch-processing/complete/gs-batch-processing.iml" filepath="$USER_HOME$/Documents/workspace_java/spring_batch/gs-batch-processing/complete/gs-batch-processing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn_spring.iml" filepath="$PROJECT_DIR$/learn_spring.iml" />
+    </modules>
+  </component>
+</project>
