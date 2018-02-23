@@ -1,9 +1,9 @@
 package soundsystem;
 
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan("soundsystem")
+@Import({DataSourceConfig.class,PlayerConfig.class})
 public class SoundSystemConfig {
 }
