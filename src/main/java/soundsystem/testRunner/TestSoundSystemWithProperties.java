@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.env.Environment;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
@@ -16,7 +17,7 @@ import soundsystem.player.JayChouPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SoundSystemConfig.class)
-@ActiveProfiles("dev")
+@ActiveProfiles("prod")
 public class TestSoundSystemWithProperties {
 
     private final static Logger logger = LoggerFactory.getLogger(TestSoundSystemWithProperties.class);
@@ -24,11 +25,16 @@ public class TestSoundSystemWithProperties {
     @Autowired
     private Environment env;
 
+    @Autowired
+    @Qualifier("sysout2")
+    private String abc;
+
     @Test
     public void playMusic() {
         new GuoDanPlayer().play(env.getProperty("cd.gd.title"),env.getProperty("cd.gd.artist"),env.getProperty("cd.gd.special"));
         new JayChouPlayer().play(env.getProperty("cd.jc.title"),env.getProperty("cd.jc.artist"),env.getProperty("cd.jc.special"));
         new CDPlayer().play();
+        System.out.println(abc);
     }
 
 }
