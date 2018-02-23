@@ -24,18 +24,8 @@ public class TestSoundSystemWithProperties {
     @Autowired
     private Environment env;
 
-//    @Autowired
-////    @Jc
-//    private CompactDisc compactDisc;
-
     @Test
     public void playMusic() {
-//        if (compactDisc instanceof GuoDanPlayer) {
-//            ((GuoDanPlayer) compactDisc).play(env.getProperty("cd.gd.title"),env.getProperty("cd.gd.artist"),env.getProperty("cd.gd.special"));
-//        } else if (compactDisc instanceof JayChouPlayer) {
-//            ((JayChouPlayer) compactDisc).play(env.getProperty("cd.jc.title"),env.getProperty("cd.jc.artist"),env.getProperty("cd.jc.special"));
-//        }
-//        compactDisc.play();
         new GuoDanPlayer().play(env.getProperty("cd.gd.title"),env.getProperty("cd.gd.artist"),env.getProperty("cd.gd.special"));
         new JayChouPlayer().play(env.getProperty("cd.jc.title"),env.getProperty("cd.jc.artist"),env.getProperty("cd.jc.special"));
         new CDPlayer().play();
