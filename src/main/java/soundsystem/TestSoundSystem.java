@@ -8,6 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import soundsystem.Config.SoundSystemConfig;
+import soundsystem.annotation.Jc;
+import soundsystem.player.CDPlayer;
+import soundsystem.player.CompactDisc;
+import soundsystem.player.GuoDanPlayer;
+import soundsystem.player.JayChouPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = SoundSystemConfig.class)
@@ -17,7 +23,7 @@ public class TestSoundSystem {
     private final static Logger logger = LoggerFactory.getLogger(TestSoundSystem.class);
 
     @Autowired
-    @Gd
+    @Jc
     private CompactDisc compactDisc;
 
     @Test

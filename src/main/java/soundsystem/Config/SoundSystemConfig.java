@@ -1,4 +1,4 @@
-package soundsystem;
+package soundsystem.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

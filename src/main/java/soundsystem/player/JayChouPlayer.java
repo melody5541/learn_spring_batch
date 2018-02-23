@@ -1,6 +1,7 @@
-package soundsystem;
+package soundsystem.player;
 
 import org.springframework.stereotype.Service;
+import soundsystem.annotation.Jc;
 
 @Service
 @Jc

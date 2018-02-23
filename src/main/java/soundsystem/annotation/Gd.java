@@ -1,4 +1,4 @@
-package soundsystem;
+package soundsystem.annotation;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 
