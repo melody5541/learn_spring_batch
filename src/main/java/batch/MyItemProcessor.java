@@ -1,4 +1,4 @@
-package test;
+package batch;
 
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.validator.ValidationException;

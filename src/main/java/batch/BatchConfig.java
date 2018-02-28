@@ -1,4 +1,4 @@
-package test;
+package batch;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.springframework.batch.core.Job;
@@ -36,8 +36,8 @@ public class BatchConfig {
     public DataSource dataSource(){
         MysqlDataSource mysqlDataSource = new MysqlDataSource();
         mysqlDataSource.setUser("root");
-        mysqlDataSource.setPassword("root");
-        mysqlDataSource.setPortNumber(3363);
+        mysqlDataSource.setPassword("zm19871221");
+        mysqlDataSource.setPortNumber(3306);
         mysqlDataSource.setURL("jdbc:mysql://localhost:3306/test");
         return mysqlDataSource;
     }
@@ -47,7 +47,7 @@ public class BatchConfig {
     public JobRepository jobRepository(DataSource dataSource, PlatformTransactionManager transactionManager) throws Exception {
         JobRepositoryFactoryBean jobRepositoryFactoryBean = new JobRepositoryFactoryBean();
         jobRepositoryFactoryBean.setDatabaseType("mysql");
-        jobRepositoryFactoryBean.setDataSource(dataSource);
+        jobRepositoryFactoryBean.setDataSource(dataSource());
         jobRepositoryFactoryBean.setTransactionManager(transactionManager);
         return jobRepositoryFactoryBean.getObject();
     }
